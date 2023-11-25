@@ -579,8 +579,11 @@
     &.non-hide {
       .text {
         p {
-          -webkit-line-clamp: none;
+          -webkit-line-clamp: 100;
         }
+      }
+      .hide-btn {
+        opacity: 0.8;
       }
     }
   }

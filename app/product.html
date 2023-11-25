@@ -714,6 +714,19 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script  type="text/javascript" src="https://unpkg.com/imask"></script>
 <script>
+    let prodText = [...document.querySelectorAll('.product-info-text')];
+
+    function controlProdText() {
+        if (prodText.length) {
+            prodText.forEach((btn) => {
+                btn.querySelector('.hide-btn').addEventListener('click', () => {
+                    btn.classList.toggle('non-hide');
+                })
+            })
+        }
+    }
+    controlProdText();
+
     let zero = '0';
 let tls = [...document.querySelectorAll("input.phone-number")];
 
