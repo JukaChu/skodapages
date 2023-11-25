@@ -41,7 +41,8 @@
           onload="if(media!='all')media='all'"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css"
           onload="if(media!='all')media='all'"/>
-
+    <link rel="preload" as="style" onload="this.rel='stylesheet'"
+          href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <link rel="stylesheet" type="text/css"
           href="./css/main.min.css"/>
     <link rel="stylesheet" type="text/css"
@@ -104,26 +105,6 @@
         }
 
 
-        .one-click-form_product .s-styled-form.one-click-form .form-title {
-            font-size: 22px;
-            margin-bottom: 0;
-        }
-
-        .one-click-form_product .s-styled-form.one-click-form .phone-number {
-            height: 47px;
-            font-size: 20px;
-        }
-
-        .one-click-form_product .s-styled-form.one-click-form input[type="submit"], .one-click-form.search-form input[type="submit"] {
-            width: 100%;
-            height: 47px;
-            line-height: 47px;
-            margin-bottom: 0;
-        }
-
-        .one-click-form_product .input-row:last-child {
-            margin-bottom: 0;
-        }
 
         .product-buy-btn.btnorder1click {
             margin-bottom: 0 !important;
@@ -170,9 +151,7 @@
                 grid-template-columns: 1fr 1fr;
             }
 
-            .one-click-form_product .s-styled-form.one-click-form .phone-number {
-                max-width: 300px;
-            }
+
         }
 
         @media (max-width: 560px) {
@@ -203,7 +182,7 @@
 
 </head>
 <body id="wrap" onload="show_basket()"
-      class="type-catalog id-125 pc-l ">
+      class="type-catalog id-125 pc-l">
 <!-- Google Tag Manager (noscript) -->
 <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WH2JGD7M"
@@ -582,420 +561,492 @@
         </div>
     </div>
 </div>
-<main class="s-main s-catalogue-inner products">
+<main class="s-main s-product-inner single-prod">
 
 
-    <div class="s-section cat-inner-section">
+    <script>
+        dataLayer.push({ecommerce: null});
+        dataLayer.push({
+            event: "view_item",
+            ecommerce: {
+                items: [{
+                    item_name: "Речовий вiдсiк", // Название товара
+                    item_id: "5J9867146A47H", // Код товара
+                    price: 269.00, // Цена товара, разделитель десятичных - точка
+                    item_brand: "Skoda", // Бренд товара
+                    item_category: "Внутрішнє обладнання", // Категория товара 1 уровня
+                    item_category2: "Багажне відділення" // Категория товара 2 уровня
+                }]
+            }
+        });
+    </script>
 
-        <div class="c-box-1170 c-cont">
-            <!-- ========== Фильтры с лева====== -->
-            <div class="cat-filter-sidebar col-25 filters-block">
-
-                <div class="filter-block__head">
-                    <p>Фільтр</p>
-
-                    <div class="close-filters">
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-                <div class="swap-filter-btn-mobi closed"><span class="text">Розгорнути фільтри</span><span class="plus">+</span>
-                </div>
-                <div class="col-inner">
-                    <div class="filter-block opened">
-
-                        <div class="title"> Внутрішнє обладнання</div>
-                        <ul class='cat-list'>
-
-                        </ul>
-                    </div>
-
-
-                    <script>
-                        var selected_filters_fields_str = '';
-
-                        function sform_check_filter(name) {
-                            $('#sform').prop('action', 'https://shop.praga-auto.com.ua/ua/vnutrennee-oborudovanie/kovriki-avtomobilnye'.concat('/', name, selected_filters_fields_str));
-                            $('#sform').submit();
-                        }
-
-                        function sform_check_filter_other(name, el) {
-                            if ($(el).is(':checked')) {
-                                $('#sform').prop('action', ($('#sform').prop('action')).concat('?', name));
-                            }
-                            $('#sform').submit();
-                        }
-
-                    </script>
-
-                    <form class="filter-block-form" method="post" name="sform" id="sform"
-                          action="https://shop.praga-auto.com.ua/ua/vnutrennee-oborudovanie/kovriki-avtomobilnye">
-                        <input type="hidden" name="search" value="1"/>
-                        <!--array (
-                          'id' => '126',
-                          'source' => '0',
-                          'field_type' => '5',
-                          'name' => 'Автомобиль',
-                          'title' => 'Автомобиль',
-                          'table_name' => 'r239',
-                          'rname' => 'r239',
-                          'search' => '1',
-                          'groupid' => '0',
-                          'isinterval' => '0',
-                          'showtype' => '0',
-                          'isgeneral' => '0',
-                          'issorting' => '0',
-                          'body' => '',
-                          'showorder' => '0',
-                          'data' =>
-                          array (
-                            0 =>
-                            array (
-                              'id' => '1',
-                              'name' => 'Roomster (2006-2015)',
-                            ),
-                          ),
-                          'data_selected' =>
-                          array (
-                          ),
-                        ) -->
-                        <div class="filter-block filter-block-126">
-                            <div class="title">Автомобіль</div>
-                            <ul class="cat-list">
-                                <li>
-                                    <input onclick="sform_check_filter('r239-1')" type="checkbox" class="s-checkbox"
-
-                                           id="r2391" name="r239[]" value="1">
-                                    <label class="f-label" for="r2391"></label>
-                                    <span class="name">Roomster (2006-2015)</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <!--array (
-                      'id' => '132',
-                      'source' => '0',
-                      'field_type' => '5',
-                      'name' => 'Материал коврика',
-                      'title' => 'Материал коврика',
-                      'table_name' => 'r245',
-                      'rname' => 'r245',
-                      'search' => '1',
-                      'groupid' => '0',
-                      'isinterval' => '0',
-                      'showtype' => '0',
-                      'isgeneral' => '0',
-                      'issorting' => '0',
-                      'body' => '',
-                      'showorder' => '0',
-                      'data' =>
-                      array (
-                        0 =>
-                        array (
-                          'id' => '1',
-                          'name' => 'Резиновые',
-                        ),
-                        1 =>
-                        array (
-                          'id' => '2',
-                          'name' => 'Текстильные',
-                        ),
-                      ),
-                      'data_selected' =>
-                      array (
-                      ),
-                    ) -->
-                        <div class="filter-block filter-block-132">
-                            <div class="title">Матеріал килимка</div>
-                            <ul class="cat-list qqqzzz">
-                                <li>
-                                    <input onclick="sform_check_filter_other('r245[]=1',this)" type="checkbox"
-                                           class="s-checkbox"
-
-                                           id="r2451" name="r245[]" value="1">
-                                    <label class="f-label" for="r2451"></label>
-                                    <span class="name">Гумові</span>
-                                </li>
-                                <li>
-                                    <input onclick="sform_check_filter_other('r245[]=2',this)" type="checkbox"
-                                           class="s-checkbox"
-
-                                           id="r2452" name="r245[]" value="2">
-                                    <label class="f-label" for="r2452"></label>
-                                    <span class="name">Текстильні</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </form>
-
-                </div>
-                <div class="filters-buttons">
-                    <div class="cancel-filters">
-                        Скасувати
-                    </div>
+    <div itemtype="http://schema.org/Product" itemscope="" style="display: none">
+        <div class="s-section s-product-main-section">
+            <meta itemprop="image" content="">
+            <meta itemprop="gtin12" content="upc">
+            <meta itemprop="gtin8" content="ean">
+            <meta itemprop="productID" content="isbn">
+            <meta itemprop="sku" content="sku">
+            <div itemprop="brand" itemscope="" itemtype="http://schema.org/Organization">
+                <meta itemprop="name" content="ŠKODA">
+            </div>
+            <div itemprop="review" itemscope="" itemtype="http://schema.org/Review">
+                <meta itemprop="name" content="Отзыв о Речовий вiдсiк">
+                <meta itemprop="author" content="Гость">
+                <meta itemprop="datePublished" content="">
+                <div itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
+                    <meta itemprop="worstRating" content="4">
+                    <meta itemprop="ratingValue" content="5">
+                    <meta itemprop="bestRating" content="5">
                 </div>
             </div>
+            <div itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating" itemscope="">
+                <meta itemprop="ratingValue" content="4">
+                <meta itemprop="bestRating" content="5">
+                <meta itemprop="ratingCount" content="9999">
+            </div>
+            <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                <meta itemprop="url" content="https://shop.praga-auto.com.ua/ua/ua/t825-rechovij-vidsik.html">
+                <meta itemprop="price" content="269">
+                <meta itemprop="priceValidUntil" content="2024-11-23">
+                <meta itemprop="priceCurrency" content="UAH">
+                <meta itemprop="availability" content="http://schema.org/InStock">
 
-
-
-            <!-- End Фильтры с лева -->
-
-            <div class="col-75 col-product-inner">
-                <div id="breadcrumbs" class="s-breadcrumbs">
-                    <div class="c-box-1170">
-                        <ul itemtype="https://schema.org/BreadcrumbList" class='path' itemscope>
-                            <li itemprop="itemListElement" itemtype="https://schema.org/ListItem" itemscope><a
-                                    itemprop="item" href='https://shop.praga-auto.com.ua/ua/'>
-                                <meta itemprop="position" content="0">
-                                <meta itemprop="name" content="Головна">
-                                Головна</a></li>
-                            <li itemprop="itemListElement" itemtype="https://schema.org/ListItem" itemscope><a
-                                    itemprop="item" href='https://shop.praga-auto.com.ua/ua/catalog'>
-                                <meta itemprop="position" content="1">
-                                <meta itemprop="name" content="Каталог">
-                                Каталог</a></li>
-                            <li itemprop="itemListElement" itemtype="https://schema.org/ListItem" itemscope>
-                                <meta itemprop="position" content="2">
-                                <meta itemprop="name" content="Килимки салону">
-                                Килимки салону
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="s-header-wrap">
-
-                    <h1 class="common-header">Килимки салону <strong>(68)</strong></h1>
-                </div>
-                <div class="swap-filter-btn-mobi closed"><span class="text">Розгорнути фільтри</span><span class="plus">+</span>
-                </div>
-                <div class="catalog-top-sort">
-                    <ul>
-                        <li class="active">По замовчуванню</li>
-                        <li>Спочатку дорогі</li>
-                        <li>Спочатку дешеві</li>
-                    </ul>
-                </div>
-
-                <div class="cat-inner-product-wrap item products" id="j-products-wrap">
-                    <div class="col-33 s-product">
-                        <div class="product-card-inner">
-
-                            <div class="product-card__top">
-                                <div class="tags">
-                                    <div class="tag" style="--col: #419468; --col2: #fff;">Новинка</div>
-                                </div>
-                                <div class="image-fix">
-                                    <a class="link-abs" title="Килимок додатковий 333 Praga-auto"
-                                       href="https://shop.praga-auto.com.ua/ua/t333-kilimok-dodatkovij.html">
-                                        <img class="fits" src="https://shop.praga-auto.com.ua/images/w/230/9808.webp"
-                                             alt="Килимок додатковий 333" title="Килимок додатковий 333 Praga-auto"/>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="product-card__bot">
-                                <a href="https://shop.praga-auto.com.ua/ua/t333-kilimok-dodatkovij.html" class="title">Килимок
-                                    додатковий</a>
-
-                                <p>Сітки багажного відділення</p>
-
-                                <div class="bt">
-                                    <div class="product-price">
-                                        <span class="active">283₴</span>
-                                    </div>
-                                    <div class="rt">
-
-                                        <div class="s-label s-onstock">В наявності</div>
-
-                                        <a href="javascript:void(0);" class="buy buy-btn"
-                                        >
-                                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M4.10499 20L5.40499 7H16.595L17.895 20H4.10499Z" stroke="black"
-                                                      stroke-width="2"/>
-                                                <path d="M14 11V5C14 3.34315 12.6569 2 11 2V2C9.34315 2 8 3.34315 8 5V11"
-                                                      stroke="black" stroke-width="2"/>
-                                            </svg>
-
-                                        </a>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-
-                        </div>
-
-                    </div>
-                    <div class="col-33 s-product">
-                        <div class="product-card-inner">
-
-                            <div class="product-card__top">
-                                <div class="tags">
-                                    <div class="tag" style="--col: #78FAAE; --col2: #161718;">-25%</div>
-                                </div>
-                                <div class="image-fix">
-                                    <a class="link-abs" title="Килимок додатковий 333 Praga-auto"
-                                       href="https://shop.praga-auto.com.ua/ua/t333-kilimok-dodatkovij.html">
-                                        <img class="fits" src="https://shop.praga-auto.com.ua/images/w/230/9808.webp"
-                                             alt="Килимок додатковий 333" title="Килимок додатковий 333 Praga-auto"/>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="product-card__bot">
-                                <a href="https://shop.praga-auto.com.ua/ua/t333-kilimok-dodatkovij.html" class="title">Килимок
-                                    додатковий</a>
-
-                                <p>Сітки багажного відділення</p>
-
-                                <div class="bt">
-                                    <div class="product-price">
-                                        <span class="active">283₴</span>
-                                    </div>
-                                    <div class="rt">
-
-                                        <div class="s-label s-onstock">В наявності</div>
-
-                                        <a href="javascript:void(0);" class="buy buy-btn"
-                                        >
-                                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M4.10499 20L5.40499 7H16.595L17.895 20H4.10499Z" stroke="black"
-                                                      stroke-width="2"/>
-                                                <path d="M14 11V5C14 3.34315 12.6569 2 11 2V2C9.34315 2 8 3.34315 8 5V11"
-                                                      stroke="black" stroke-width="2"/>
-                                            </svg>
-
-                                        </a>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-
-                        </div>
-
-                    </div>
-                    <div class="col-33 s-product">
-                        <div class="product-card-inner">
-
-                            <div class="product-card__top">
-                                <div class="tags">
-                                </div>
-                                <div class="image-fix">
-                                    <a class="link-abs" title="Килимок додатковий 333 Praga-auto"
-                                       href="https://shop.praga-auto.com.ua/ua/t333-kilimok-dodatkovij.html">
-                                        <img class="fits" src="https://shop.praga-auto.com.ua/images/w/230/9808.webp"
-                                             alt="Килимок додатковий 333" title="Килимок додатковий 333 Praga-auto"/>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="product-card__bot">
-                                <a href="https://shop.praga-auto.com.ua/ua/t333-kilimok-dodatkovij.html" class="title">Килимок
-                                    додатковий</a>
-
-                                <p>Сітки багажного відділення</p>
-
-                                <div class="bt">
-                                    <div class="product-price">
-                                        <span class="active">283₴</span>
-                                    </div>
-                                    <div class="rt">
-
-                                        <div class="s-label out-offstock">Немає в наявності</div>
-
-                                        <a href="javascript:void(0);" class="buy order-btn "
-                                        >
-                                            Замовити
-
-                                        </a>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-
-                        </div>
-
-                    </div>
-                </div>
-                <a href="" class="load-more">Показати ще</a>
-                <div class="pagination-new">
-                    <ul class="page-numbers">
-                        <li class="prev prev--double">
-                            <a href=""><img src="./img/pag1.svg" alt=""></a>
-                        </li>
-                        <li class="prev">
-                            <a href=""><img src="./img/pag2.svg" alt=""></a>
-                        </li>
-                        <li><a href='' class='active'>1</a></li>
-                        <li><a class=''
-                               href=''>2</a>
-                        </li>
-                        <li><a class=''
-                               href=''>3</a>
-                        </li>
-                        <li><a class=''
-                               href=''>4</a>
-                        </li>
-                        <li><a class=''
-                               href=''>5</a>
-                        </li>
-                        <li class="next">
-                            <a href="">
-                                <img src="./img/pag2.svg" alt="">
-                            </a>
-                        </li>
-                        <li class="next next--double">
-                            <a href="">
-                                <img src="./img/pag1.svg" alt="">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                <meta content="" itemprop="offerCount">
+                <meta content="" itemprop="highPrice">
+                <meta content="" itemprop="lowPrice">
 
             </div>
 
-            <script>
-
-                let cancelFilters = [...document.querySelectorAll('.cancel-filters')];
-
-                function controlFilterCancel() {
-                    if (cancelFilters.length) {
-
-                        let closeFilters = [...document.querySelectorAll('.close-filters')];
-                        let openFilters = [...document.querySelectorAll('.swap-filter-btn-mobi')];
-
-                        closeFilters.forEach((cls) => {
-                            cls.addEventListener('click', () => {
-                               document.body.classList.remove('open-filters');
-                           })
-                        });
-                        openFilters.forEach((opns) => {
-                            opns.addEventListener('click', ( ) => {
-                                document.body.classList.add('open-filters');
-                            })
-                        });
-                        cancelFilters.forEach((btn) => {
-                            btn.addEventListener('click', () => {
-                                let inputs = [...btn.closest('.filters-block').querySelectorAll('input:checked')];
-                                console.log(inputs);
-                                inputs.forEach((inp) => {
-                                    inp.click();
-                                })
-                            })
-                        })
-                    }
-                }
-
-                controlFilterCancel();
-            </script>
         </div>
     </div>
+    <section class="product-block">
+        <div class="product-top">
+            <div id="breadcrumbs2" class="s-breadcrumbs">
+                <div class="c-box-1170">
+                    <div class="breadcrumbs-cont c-cont">
+                        <div class="breadcrumbs-item">
+                            <ul itemtype="https://schema.org/BreadcrumbList" class="path" itemscope="">
+                                <li itemprop="itemListElement" itemtype="https://schema.org/ListItem"
+                                    itemscope=""><a
+                                        itemprop="item" href="https://shop.praga-auto.com.ua/ua/">
+                                    <meta itemprop="position" content="0">
+                                    <meta itemprop="name" content="Головна">
+                                    Головна</a></li>
+                                <li itemprop="itemListElement" itemtype="https://schema.org/ListItem"
+                                    itemscope=""><a
+                                        itemprop="item" href="https://shop.praga-auto.com.ua/ua/catalog">
+                                    <meta itemprop="position" content="1">
+                                    <meta itemprop="name" content="Каталог">
+                                    Каталог</a></li>
+                                <li itemprop="itemListElement" itemtype="https://schema.org/ListItem"
+                                    itemscope=""><a
+                                        itemprop="item"
+                                        href="https://shop.praga-auto.com.ua/ua/vnutrennee-oborudovanie/luggage-accessories">
+                                    <meta itemprop="position" content="2">
+                                    <meta itemprop="name" content="Багажне відділення">
+                                    Багажне відділення</a></li>
+                                <li itemprop="itemListElement" itemtype="https://schema.org/ListItem"
+                                    itemscope="">
+                                    <meta itemprop="position" content="3">
+                                    <meta itemprop="name" content="Речовий вiдсiк">
+                                    Речовий вiдсiк
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span class="ttl">Сітка багажника Superb II Liftback вертикальна</span>
+        </div>
+        <div class="product-block-cont">
+            <div class="product-block__left">
+                <div class="c-box-585">
+                    <div class="product-left">
+
+
+                        <div class="product-slider">
+                            <div class="product-slider__main">
+                                <div class="swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="img">
+                                                <img src="./img/skodapr1.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="img">
+                                                <img src="./img/skodapr2.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="img">
+                                                <img src="./img/skodapr3.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="img">
+                                                <img src="./img/skodapr1.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="product-slider__thumb">
+                                <div class="swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="img">
+                                                <img src="./img/skodapr1.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="img">
+                                                <img src="./img/skodapr2.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="img">
+                                                <img src="./img/skodapr3.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="img">
+                                                <img src="./img/skodapr1.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-info-text">
+                            <div class="text">
+                                <p>Вертикальна сітка багажника для Skoda Superb. Сітка призначена для захисту предметів,
+                                    що транспортуються, від ковзання і переміщення в багажному відділенні. Сітка
+                                    еластична, дуже легко і швидко кріпиться до крючків і петель в багажному відділенні.
+                                    Щоб запобігти пошкодженню сітки, рекомендовано не перевозити гострі, ріжучі
+                                    предмети. Колір: чорний. Догляд: ручне прання з рідким миючим засобом. Не
+                                    використовуйте абразивні чистячі засоби і розчинники. Призначення: Skoda Superb
+                                    Liftback</p>
+                            </div>
+                            <div class="hide-btn">Читати далі</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-block__right">
+                <div class="c-box-585">
+                    <div class="product-right">
+                        <div id="breadcrumbs" class="s-breadcrumbs">
+                            <div class="c-box-1170">
+                                <div class="breadcrumbs-cont c-cont">
+                                    <div class="breadcrumbs-item">
+                                        <ul itemtype="https://schema.org/BreadcrumbList" class="path" itemscope="">
+                                            <li itemprop="itemListElement" itemtype="https://schema.org/ListItem"
+                                                itemscope=""><a
+                                                    itemprop="item" href="https://shop.praga-auto.com.ua/ua/">
+                                                <meta itemprop="position" content="0">
+                                                <meta itemprop="name" content="Головна">
+                                                Головна</a></li>
+                                            <li itemprop="itemListElement" itemtype="https://schema.org/ListItem"
+                                                itemscope=""><a
+                                                    itemprop="item" href="https://shop.praga-auto.com.ua/ua/catalog">
+                                                <meta itemprop="position" content="1">
+                                                <meta itemprop="name" content="Каталог">
+                                                Каталог</a></li>
+                                            <li itemprop="itemListElement" itemtype="https://schema.org/ListItem"
+                                                itemscope=""><a
+                                                    itemprop="item"
+                                                    href="https://shop.praga-auto.com.ua/ua/vnutrennee-oborudovanie/luggage-accessories">
+                                                <meta itemprop="position" content="2">
+                                                <meta itemprop="name" content="Багажне відділення">
+                                                Багажне відділення</a></li>
+                                            <li itemprop="itemListElement" itemtype="https://schema.org/ListItem"
+                                                itemscope="">
+                                                <meta itemprop="position" content="3">
+                                                <meta itemprop="name" content="Речовий вiдсiк">
+                                                Речовий вiдсiк
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h1 class="ttl">
+                            Сітка багажника Superb II Liftback вертикальна
+                        </h1>
+                        <div class="product-price-prod">
+                            <p>1336.86</p>
+                        </div>
+
+                        <div class="product-buy-line">
+
+                            <div class="counter-wrap">
+                                <span class="counter-ctrl minusOne" onclick="">-</span>
+                                <span class="counter">1</span>
+
+                                <input class="counter qty " value="1" name="q_334" id="col" type="hidden" size="3">
+                                <span class="counter-ctrl plusOne"
+                                      data-gtm="[{&quot;item_name&quot;:&quot;\u041a\u0438\u043b\u0438\u043c\u043e\u043a \u0434\u043e\u0434\u0430\u0442\u043a\u043e\u0432\u0438\u0439&quot;,&quot;item_id&quot;:&quot;6VA061580&quot;,&quot;price&quot;:&quot;325.00&quot;,&quot;item_brand&quot;:&quot;Skoda&quot;,&quot;item_category&quot;:&quot;\u0412\u043d\u0443\u0442\u0440\u0456\u0448\u043d\u0454 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f&quot;,&quot;item_category2&quot;:&quot;\u041a\u0438\u043b\u0438\u043c\u043a\u0438 \u0441\u0430\u043b\u043e\u043d\u0443&quot;}]">+</span>
+                            </div>
+
+
+                            <a href="" class="buy-btn">
+                                Придбати зараз
+                            </a>
+                            <a href="" class="quick-btn  btn-mod" data-mod="fast">Швидка покупка</a>
+                        </div>
+
+                        <div class="aval">
+                            <div class="s-label-row">
+                                <div class="s-label s-onstock">В наявності</div>
+                            </div>
+
+                            <a href="" class="deliv-btn">
+                                <img src="./img/deliv1.svg" alt="">
+                                Оплата і Доставка
+                            </a>
+
+
+                        </div>
+
+                        <div class="technical-chars">
+                            <span>Технічні характеристики</span>
+                            <ul>
+                                <li>
+                                    <span>Тип</span>
+                                    <p>Сітки багажного відділення</p>
+                                </li>
+                                <li>
+                                    <span>Моделі автомобілів</span>
+                                    <p>SUPERB</p>
+                                </li>
+                                <li>
+                                    <span>Код продукту</span>
+                                    <p>DMK800004</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section class="pay-attention">
+        <div class="c-box-1170">
+
+            <span class="sub-title">Зверніть увагу</span>
+            <div class="cat-inner-product-wrap attention-list">
+                <div class="col-33 s-product">
+                    <div class="product-card-inner">
+
+                        <div class="product-card__top">
+                            <div class="tags">
+                                <div class="tag" style="--col: #419468; --col2: #fff;">Новинка</div>
+                            </div>
+                            <div class="image-fix">
+                                <a class="link-abs" title="Килимок додатковий 333 Praga-auto"
+                                   href="https://shop.praga-auto.com.ua/ua/t333-kilimok-dodatkovij.html">
+                                    <img class="fits" src="https://shop.praga-auto.com.ua/images/w/230/9808.webp"
+                                         alt="Килимок додатковий 333" title="Килимок додатковий 333 Praga-auto"/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="product-card__bot">
+                            <a href="https://shop.praga-auto.com.ua/ua/t333-kilimok-dodatkovij.html" class="title">Килимок
+                                додатковий</a>
+
+                            <p>Сітки багажного відділення</p>
+
+                            <div class="bt">
+                                <div class="product-price">
+                                    <span class="active">283₴</span>
+                                </div>
+                                <div class="rt">
+
+                                    <div class="s-label s-onstock">В наявності</div>
+
+                                    <a href="javascript:void(0);" class="buy buy-btn"
+                                    >
+                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.10499 20L5.40499 7H16.595L17.895 20H4.10499Z" stroke="black"
+                                                  stroke-width="2"/>
+                                            <path d="M14 11V5C14 3.34315 12.6569 2 11 2V2C9.34315 2 8 3.34315 8 5V11"
+                                                  stroke="black" stroke-width="2"/>
+                                        </svg>
+
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="col-33 s-product">
+                    <div class="product-card-inner">
+
+                        <div class="product-card__top">
+                            <div class="tags">
+                                <div class="tag" style="--col: #78FAAE; --col2: #161718;">-25%</div>
+                            </div>
+                            <div class="image-fix">
+                                <a class="link-abs" title="Килимок додатковий 333 Praga-auto"
+                                   href="https://shop.praga-auto.com.ua/ua/t333-kilimok-dodatkovij.html">
+                                    <img class="fits" src="https://shop.praga-auto.com.ua/images/w/230/9808.webp"
+                                         alt="Килимок додатковий 333" title="Килимок додатковий 333 Praga-auto"/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="product-card__bot">
+                            <a href="https://shop.praga-auto.com.ua/ua/t333-kilimok-dodatkovij.html" class="title">Килимок
+                                додатковий</a>
+
+                            <p>Сітки багажного відділення</p>
+
+                            <div class="bt">
+                                <div class="product-price">
+                                    <span class="active">283₴</span>
+                                </div>
+                                <div class="rt">
+
+                                    <div class="s-label s-onstock">В наявності</div>
+
+                                    <a href="javascript:void(0);" class="buy buy-btn"
+                                    >
+                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.10499 20L5.40499 7H16.595L17.895 20H4.10499Z" stroke="black"
+                                                  stroke-width="2"/>
+                                            <path d="M14 11V5C14 3.34315 12.6569 2 11 2V2C9.34315 2 8 3.34315 8 5V11"
+                                                  stroke="black" stroke-width="2"/>
+                                        </svg>
+
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="col-33 s-product">
+                    <div class="product-card-inner">
+
+                        <div class="product-card__top">
+                            <div class="tags">
+                            </div>
+                            <div class="image-fix">
+                                <a class="link-abs" title="Килимок додатковий 333 Praga-auto"
+                                   href="https://shop.praga-auto.com.ua/ua/t333-kilimok-dodatkovij.html">
+                                    <img class="fits" src="https://shop.praga-auto.com.ua/images/w/230/9808.webp"
+                                         alt="Килимок додатковий 333" title="Килимок додатковий 333 Praga-auto"/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="product-card__bot">
+                            <a href="https://shop.praga-auto.com.ua/ua/t333-kilimok-dodatkovij.html" class="title">Килимок
+                                додатковий</a>
+
+                            <p>Сітки багажного відділення</p>
+
+                            <div class="bt">
+                                <div class="product-price">
+                                    <span class="active">283₴</span>
+                                </div>
+                                <div class="rt">
+
+                                    <div class="s-label out-offstock">Немає в наявності</div>
+
+                                    <a href="javascript:void(0);" class="buy order-btn "
+                                    >
+                                        Замовити
+
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="col-33 s-product">
+                    <div class="product-card-inner">
+
+                        <div class="product-card__top">
+                            <div class="tags">
+                                <div class="tag" style="--col: #419468; --col2: #fff;">Новинка</div>
+                            </div>
+                            <div class="image-fix">
+                                <a class="link-abs" title="Килимок додатковий 333 Praga-auto"
+                                   href="https://shop.praga-auto.com.ua/ua/t333-kilimok-dodatkovij.html">
+                                    <img class="fits" src="https://shop.praga-auto.com.ua/images/w/230/9808.webp"
+                                         alt="Килимок додатковий 333" title="Килимок додатковий 333 Praga-auto"/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="product-card__bot">
+                            <a href="https://shop.praga-auto.com.ua/ua/t333-kilimok-dodatkovij.html" class="title">Килимок
+                                додатковий</a>
+
+                            <p>Сітки багажного відділення</p>
+
+                            <div class="bt">
+                                <div class="product-price">
+                                    <span class="active">283₴</span>
+                                </div>
+                                <div class="rt">
+
+                                    <div class="s-label s-onstock">В наявності</div>
+
+                                    <a href="javascript:void(0);" class="buy buy-btn"
+                                    >
+                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.10499 20L5.40499 7H16.595L17.895 20H4.10499Z" stroke="black"
+                                                  stroke-width="2"/>
+                                            <path d="M14 11V5C14 3.34315 12.6569 2 11 2V2C9.34315 2 8 3.34315 8 5V11"
+                                                  stroke="black" stroke-width="2"/>
+                                        </svg>
+
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
 
 </main>
 <footer id="footer" class="s-footer">
@@ -1288,6 +1339,241 @@
             }, {'class': 'wr fl user', 'data-num': 'test'});
     });
 
+</script>
+
+<div class="modal-window" data-modal="fast">
+    <div class="backplate"></div>
+    <div class="modal-container">
+        <div class="modal-head">
+            <p>Швидка покупка</p>
+            <div class="modal-close">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="modal-cont">
+            <form id="order_in_one_click" action="">
+                <div class="one-click-form_product">
+                    <div class="s-styled-form one-click-form">
+                        <div class="input-row">
+                            <label class="s-label">Номер телефону</label>
+                            <input name="order_phone" id="order_phone" class="phone-number" type="text"
+                                   placeholder="+38(__)-___-__-__">
+                            <input name="order1click" id="order1click" type="hidden" value="">
+                        </div>
+                        <div class="input-row">
+                            <input onclick="order_by_phone(this);" type="button" data-good-id="825"
+                                   value="Чекаю дзвінка" disabled="" class="quick-btn btnorder1click">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script  type="text/javascript" src="https://unpkg.com/imask"></script>
+<script>
+    let zero = '0';
+let tls = [...document.querySelectorAll("input.phone-number")];
+
+var maskOptions = {
+    mask: `{+38}(000)000-00-00`,
+};
+
+
+tls.forEach((tl) => {
+    var mask = IMask(tl, maskOptions);
+});
+</script>
+<script>
+    //modal window
+
+    let btnMod = [...document.querySelectorAll('.btn-mod')];
+    let modals = [...document.querySelectorAll('.modal-window')];
+    let closeModal = [...document.querySelectorAll('.modal-close')];
+    let clsSecModal = [...document.querySelectorAll('.modal-window .cls')];
+    let backplates = [...document.querySelectorAll('.backplate')];
+
+    function controlModal() {
+        if (btnMod.length) {
+
+
+            $('body').on('click', '.btn-mod', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                let data = this.dataset.mod;
+                if (document.querySelector('.modal-window.visible')) {
+                    document.querySelector('.modal-window.visible').classList.remove('visible');
+                }
+
+                modals.forEach((mod) => {
+                    if (mod.dataset.modal === data) {
+                        document.body.classList.add('no-scroll');
+
+                        mod.classList.add('visible');
+
+                    }
+                })
+            });
+
+
+            $('body').on('click', '.modal-close', function (e) {
+                if (this.closest('.added-cart')) {
+                    this.closest('.added-cart').classList.remove('visible');
+                } else {
+                    this.closest('.modal-window').classList.remove('visible');
+                    document.body.classList.remove('no-scroll');
+                    if (this.closest('.modal-window').classList.contains('video')) {
+                        this.closest('.modal-window').querySelector('.video-cont').classList.remove('playing');
+
+                        this.closest('.modal-window').querySelector('.video-cont').innerHTML = '';
+                    }
+                }
+                [...document.querySelectorAll('.added-cart')].forEach((bt) => {
+                    bt.classList.remove('visible');
+                });
+            });
+
+
+            $('body').on('click', '.backplate', function (e) {
+                this.closest('.modal-window').classList.remove('visible');
+                document.body.classList.remove('no-scroll');
+
+                if (this.closest('.modal-window').classList.contains('video')) {
+                    this.closest('.modal-window').querySelector('.video-cont').classList.remove('playing');
+                    this.closest('.modal-window').querySelector('.video-cont').innerHTML = '';
+                }
+                [...document.querySelectorAll('.added-cart')].forEach((bt) => {
+                    bt.classList.remove('visible');
+                });
+            });
+
+
+            if (clsSecModal.length) {
+
+                $('body').on('click', '.modal-window .cls', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    this.closest('.modal-window').classList.remove('visible');
+                    document.body.classList.remove('no-scroll');
+                    if (this.closest('.modal-window').classList.contains('video')) {
+                        this.closest('.modal-window').querySelector('.video-cont').classList.remove('playing');
+
+                        this.closest('.modal-window').querySelector('.video-cont').innerHTML = '';
+                    }
+                    [...document.querySelectorAll('.added-cart')].forEach((bt) => {
+                        bt.classList.remove('visible');
+                    });
+                });
+
+
+            }
+        }
+    }
+
+    controlModal();
+
+
+    let prodSlider = [...document.querySelectorAll('.product-slider')];
+
+
+    let mainSlider = [...document.querySelectorAll('.product-slider')];
+
+    function startMainSlider() {
+        if (!mainSlider.length) {
+
+        } else {
+
+            mainSlider.forEach((sld) => {
+                let sldCont = sld.querySelector('.product-slider__main .swiper');
+
+                let sldThumb = sld.querySelector('.product-slider__thumb .swiper');
+
+
+                var swiperThumb = new Swiper(sldThumb, {
+                    spaceBetween: 10,
+                    slidesPerView: 3,
+                    slidesPerGroup: 1,
+                    freeMode: false,
+                    watchSlidesProgress: true,
+                    direction: 'horizontal',
+                    centeredSlides: false,
+                    loop: true,
+                    draggable: true,
+
+
+                    touchRatio: 1,
+                    touchAngle: 160,
+                    simulateTouch: true,
+
+                    followFinger: true,
+                    allowTouchMove: true,
+                    threshold: true,
+                    touchMoveStopPropagation: true,
+                    touchStartPreventDefault: true,
+                    touchStartForcePreventDefault: true,
+                    touchReleaseOnEdges: true,
+
+                    resistance: true,
+                    resistanceRatio: 0.3,
+
+                    breakpoints: {
+
+                        767: {
+                            centeredSlides: false,
+                            slidesPerView: 4,
+                            slidesPerGroup: 1,
+                            spaceBetween: 10,
+                        },
+                    }
+
+                });
+
+                const swiper2 = new Swiper(sldCont, {
+                    // Optional parameters
+
+                    slidesPerView: 1,
+                    slidesPerGroup: 1,
+                    speed: 700,
+                    centeredSlides: false,
+                    touchRatio: 1,
+                    touchAngle: 160,
+                    simulateTouch: true,
+                    loop: false,
+
+                    followFinger: true,
+                    allowTouchMove: true,
+                    threshold: true,
+                    touchMoveStopPropagation: true,
+                    touchStartPreventDefault: true,
+                    touchStartForcePreventDefault: true,
+                    touchReleaseOnEdges: true,
+
+                    resistance: true,
+                    resistanceRatio: 0.3,
+                    cssMode: true,
+                    navigation: false,
+                    autoplay: false,
+                    spaceBetween: 20,
+
+                    thumbs: {
+                        swiper: swiperThumb,
+                    },
+
+                    pagination: false,
+
+
+                });
+
+
+            })
+
+        }
+    }
+
+    startMainSlider();
 </script>
 </body>
 </html>
