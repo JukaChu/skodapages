@@ -23,6 +23,12 @@
     padding: 16px 0;
     gap: 16px;
   }
+  .s-contact, .s-textpage {
+    .c-box-1170 {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -54,6 +60,19 @@
 }
 
 @media screen and (max-width: 1025px) {
+  .blog-items-wrap {
+    gap: 10px;
+  }
+  .blog-item {
+    width: calc((100% / 3) - (20px / 3));
+  }
+  .blog-item-text {
+    padding: 16px 12px;
+
+    .blog-item-title {
+      font-size: 18px;
+    }
+  }
   .product-buy-line {
     flex-wrap: wrap;
   }
@@ -330,6 +349,9 @@
   .footer-top .logo-fix {
     width: 168px;
   }
+  .s-textpage {
+    padding-bottom: 0;
+  }
 }
 
 @media screen and (max-width: 950px) {
@@ -545,6 +567,115 @@
 }
 
 @media screen and (max-width: 768px) {
+  .s-latest-news {
+    padding: 40px 0;
+  }
+  .s-contact {
+    padding-bottom: 0;
+  }
+  .s-latest-news {
+    .blog-items-wrap {
+      padding-bottom: 12px;
+      overflow-x: auto;
+      flex-wrap: nowrap;
+    }
+
+    .blog-item {
+      width: 70%;
+      flex-shrink: 0;
+    }
+  }
+  .s-map {
+    padding-bottom: 0;
+  }
+  .s-contact {
+    padding-bottom: 0;
+  }
+  .cat-list {
+    width: calc(100% + 32px);
+    border-radius: 0;
+    margin-left: -16px;
+    margin-right: -16px;
+    padding: 20px 16px;
+    margin-top: 20px;
+
+    .cat-list {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      padding: 0;
+      margin-top: 0;
+
+      > li {
+        > div {
+          > a {
+
+          }
+        }
+      }
+    }
+  }
+  .cat-list > li > div a {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .search-by-code {
+    margin: 15px 0;
+  }
+  .search-row-input {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  .home-slider {
+    margin: 0 0 10px;
+  }
+  .text-section {
+    margin: 20px 0 30px;
+  }
+  .product-bycar {
+    width: calc((100% / 3) - (40px / 3));
+  }
+  .product-bycar .title {
+    padding: 12px;
+  }
+  .text-section .s-header-wrap {
+    margin-bottom: 15px;
+  }
+  .text-section {
+    .two-col-text {
+      margin-top: 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      -o-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+    }
+
+    .hide-btn {
+      color: #419468;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      cursor: pointer;
+      display: flex;
+      margin-top: 8px;
+    }
+
+    &.non-hide {
+      .two-col-text {
+        -webkit-line-clamp: 300;
+      }
+
+      .hide-btn {
+        opacity: 0.8;
+      }
+    }
+  }
   .product-block {
     flex-direction: column;
     align-items: flex-start;
@@ -566,6 +697,7 @@
         text-overflow: ellipsis;
       }
     }
+
     .hide-btn {
       color: #419468;
       font-size: 14px;
@@ -576,12 +708,14 @@
       display: flex;
       margin-top: 8px;
     }
+
     &.non-hide {
       .text {
         p {
           -webkit-line-clamp: 100;
         }
       }
+
       .hide-btn {
         opacity: 0.8;
       }
@@ -638,9 +772,22 @@
   .common-header {
     display: initial;
   }
+  .s-contact {
+    .common-header {
+      margin-bottom: 20px;
+      display: flex;
+    }
+  }
 }
 
 @media screen and (max-width: 600px) {
+  .product-bycar .title {
+    font-size: 17px;
+    padding: 12px 10px;
+  }
+  .product-bycar {
+    width: calc(50% - 10px);
+  }
   .technical-chars ul {
     width: 100%;
     min-width: 0;
@@ -648,9 +795,11 @@
   .technical-chars ul {
     li {
       gap: 14px;
+
       span {
         width: calc(45% - 7px);
       }
+
       p {
         width: calc(55% - 7px);
       }
@@ -744,7 +893,58 @@
   }
 }
 
+@media screen and (max-width: 540px) {
+  .search-code {
+    width: 100%;
+
+  }
+  .search-code input {
+    flex-grow: 1;
+    padding-right: 10px;
+    width: auto;
+
+  }
+}
+
 @media screen and (max-width: 450px) {
+  .top-slide-fix {
+    padding-top: 44%;
+  }
+
+  .bycar-list {
+    gap: 10px;
+  }
+  .product-bycar {
+    width: calc(50% - 5px);
+  }
+  .product-bycar-section {
+    margin: 20px 0;
+  }
+  .search-row-input .common-header {
+    font-size: 26px;
+  }
+  .s-header-wrap {
+    .common-header {
+      font-size: 26px;
+    }
+  }
+  .search-code {
+
+
+    input {
+      border-radius: 4px 0 0 4px;
+      border-right: none;
+      width: calc(100% - 80px);
+    }
+
+    .buy-btn {
+      border-radius: 0 4px 4px 0;
+      border-left: none;
+      padding: 5px 10px;
+      width: 80px;
+    }
+
+  }
   .footer-menu .s-navi-wrap ul li {
     width: 100%;
 
