@@ -283,7 +283,7 @@ function startHomeSlider() {
                     prevEl: sldPrev,
                 },
                 autoplay: false,
-                spaceBetween: 20,
+                spaceBetween: 0,
 
 
                 pagination: {
