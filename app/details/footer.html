@@ -92,6 +92,135 @@
     </div>
 
 </footer>
+
+<div class="popups-wrap">
+    <div class="menu-dropdown-overlay"></div>
+    <div class="all-doc-overlay"></div>
+    <div class="popups-container" id="popUpContainer">
+
+        <div class="popup popup-500" data-id="byOrderOneClick">
+            <div class="close">+</div>
+            <div class="pop-up-inner">
+                <div class="order_one_click_success">
+                    Ваше замовлення прийняте! <br>
+                    Наш менеджер зателефонує Вам найближчим часом. <br>
+                </div>
+                <button class="product-buy-btn" onclick="pageReload()">ОК</button>
+            </div>
+        </div>
+
+        <div class="popup popup-500" data-id="byOrder">
+            <div class="close">+</div>
+            <div class="pop-up-inner">
+                <div class="popup-title" id="info_product_title">Повідомити про наявність</div>
+                <div class="s-styled-form c-cont">
+                    <iframe style="display:none;" name="info_productid"></iframe>
+                    <form method="post" target="info_productid" id="report_availability" action="/ajax.php">
+                        <input type="hidden" name="action" value="info_product"/>
+                        <input type="hidden" id="info_productid" name="productid"/>
+                        <input type="hidden" id="info_product_parentid" name="parentid"/>
+                        <label class="s-label">Телефон*</label>
+                        <div class="col-input-180">
+                            <input type="text" name="email" class="phone-number" required placeholder="+380-xx-xxx-xxxx">
+                        </div>
+                        <div class="col-submit180">
+                            <input id="info_product_submit" type="submit" value="Повідомити мене"
+                                   class="product-buy-btn">
+                        </div>
+                    </form>
+                    <div id="info_product_notes" class="form-notes">Залиште номер телефону і ми Вам зателефонуємо</div>
+                </div>
+            </div>
+        </div>
+        <div class="popup popup-545" data-id="login">
+            <div class="close">+</div>
+            <div class="pop-up-inner">
+                <div class="popup-tabs-wrap c-cont">
+                    <div class="col-50 popup-tab tabSwitcher active" data-tab="login">Вхід</div>
+                    <div class="col-50 popup-tab tabSwitcher" data-tab="register">Реєстрація</div>
+                </div>
+                <div class="popup-tabs-content">
+                    <div class="tab-content active" data-id="login">
+                        <div class="s-styled-form">
+                            <div class="title">Увійти</div>
+                            <iframe style="display:none;" name="login"></iframe>
+                            <form method="post" action="https://shop.praga-auto.com.ua/ua/inc/login.php?login" id="authorization-form"
+                                  target="login">
+                                <div class="input-row">
+                                    <input required name="login_email" type="email" placeholder="Email">
+                                </div>
+                                <div class="input-row">
+                                    <input required type="password" name="login_passw" placeholder="Пароль">
+                                </div>
+                                <div class="input-row">
+                                    <input type="submit" value="Підтвердити" class="product-buy-btn">
+                                </div>
+                            </form>
+                            <div class="form-tip"><a class="showPopUp" data-popup="passRestore"
+                                                     href="#">Забули пароль?</a></div>
+                        </div>
+                    </div>
+                    <div class="tab-content" data-id="register">
+                        <div class="s-styled-form s-register-form">
+                            <div class="title">Реєстрація</div>
+
+                            <form method="post" action="https://shop.praga-auto.com.ua/ua/inc/new.php?rg" id="register-form" target="login">
+                                <div class="c-cont">
+                                    <div class="col-50">
+                                        <label class="s-label f-16">Iм'я</label>
+                                        <input required name="r129" id="r129" type="text">
+                                    </div>
+                                    <div class="col-50">
+                                        <label class="s-label f-16">Прізвище</label>
+                                        <input name="r235" id="r235" type="text">
+                                    </div>
+                                </div>
+                                <div class="input-row">
+                                    <label class="s-label f-16">E-mail</label>
+                                    <input required type="email" name="email">
+                                </div>
+                                <div class="c-cont">
+                                    <div class="col-50">
+                                        <label class="s-label f-16">Пароль</label>
+                                        <input name="passw" required type="password">
+                                    </div>
+                                    <div class="col-50">
+                                        <label class="s-label f-16">Повторіть пароль</label>
+                                        <input name="repassw" required type="password">
+                                    </div>
+                                </div>
+                                <div class="input-row">
+                                    <input type="submit" value="Зареєструватися" class="product-buy-btn">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup popup-545 popup-restore" data-id="passRestore">
+            <div class="close">+</div>
+            <div class="pop-up-inner">
+                <div class="c-box-450">
+                    <div class="popup-title f-30 bold">Відновлення паролю</div>
+                    <div class="s-styled-form">
+                        <form method="post" action="https://shop.praga-auto.com.ua/ua/inc/login.php?restore" target="login">
+                            <div class="input-row">
+                                <label class="s-label">Введіть email, ми відправимо Вам листа для відновлення пароля</label>
+                                <input name="remail" type="email" required placeholder="E-mail">
+                            </div>
+                            <div class="input-row">
+                                <input type="submit" value="Надіслати" class="product-buy-btn">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
     <symbol id="user" viewBox="0 0 512 512">
         <path d="M437.02,330.98c-27.883-27.882-61.071-48.523-97.281-61.018C378.521,243.251,404,198.548,404,148
