@@ -48,158 +48,7 @@
           href="/templates/css/responsive.min.css?v=1660639796"/>
 
 
-    <style>
 
-
-        .sort-products-wr {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .sort-products-wr .sort-products option {
-            font-size: 18px !important;
-        }
-
-        .new-post-department {
-            position: relative;
-            margin-top: 30px;
-        }
-
-        .new-post-department-wrap {
-            position: absolute;
-            z-index: 10;
-            border: 1px solid #cbcbcb;
-            max-height: 300px;
-            overflow: auto;
-            width: 100%;
-            margin-top: 2px;
-            box-sizing: border-box;
-        }
-
-        .fl.wr.user input:not(:placeholder-shown) + ul {
-            box-sizing: border-box;
-            margin-top: 2px;
-        }
-
-        .new-post-department-wrap-ul {
-            height: auto;
-            background-color: #fff;
-        }
-
-        .new-post-department-wrap-ul li {
-            display: block;
-            font-size: 16px;
-            padding: 3px 15px;
-            cursor: pointer;
-            -webkit-transition: all 0.3s;
-            -moz-transition: all 0.3s;
-            -ms-transition: all 0.3s;
-            -o-transition: all 0.3s;
-            transition: all 0.3s;
-        }
-
-        .new-post-department-wrap-ul li:hover {
-            background-color: #cbcbcb;
-        }
-
-
-        .one-click-form_product .s-styled-form.one-click-form .form-title {
-            font-size: 22px;
-            margin-bottom: 0;
-        }
-
-        .one-click-form_product .s-styled-form.one-click-form .phone-number {
-            height: 47px;
-            font-size: 20px;
-        }
-
-        .one-click-form_product .s-styled-form.one-click-form input[type="submit"], .one-click-form.search-form input[type="submit"] {
-            width: 100%;
-            height: 47px;
-            line-height: 47px;
-            margin-bottom: 0;
-        }
-
-        .one-click-form_product .input-row:last-child {
-            margin-bottom: 0;
-        }
-
-        .product-buy-btn.btnorder1click {
-            margin-bottom: 0 !important;
-            box-sizing: border-box;
-            border: none;
-            height: 47px !important;
-            color: #ffffff !important;
-        }
-
-        .product_btn_wrap {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            align-items: flex-end;
-        }
-
-        .product_btn_wrap .product_order_form {
-            margin-top: auto;
-            height: 47px;
-        }
-
-        .col-product-info .col-inner {
-            padding: 0 40px;
-        }
-
-        .product_btn_wrap a.product-buy-btn, .product-buy-btn {
-            padding: 0 20px;
-            width: 100%;
-            text-align: center;
-            box-sizing: border-box;
-            border: none;
-            height: 47px;
-            line-height: 47px;
-        }
-
-        @media (max-width: 998px) {
-            .product_btn_wrap {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 900px) {
-            .product_btn_wrap {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .one-click-form_product .s-styled-form.one-click-form .phone-number {
-                max-width: 300px;
-            }
-        }
-
-        @media (max-width: 560px) {
-            .product_btn_wrap {
-                grid-template-columns: 1fr;
-                margin-top: 40px;
-            }
-
-            .col-product-info .col-inner {
-                padding: 0 10px;
-            }
-        }
-
-        .order_one_click_success {
-            text-align: center;
-            font-size: 24px;
-            line-height: 1.5;
-            margin-bottom: 30px;
-        }
-
-        @media (max-width: 1024px) {
-            .btnorder1click {
-                font-size: 20px !important;
-            }
-        }
-
-    </style>
 
 </head>
 <body id="wrap" onload="show_basket()"
@@ -446,137 +295,6 @@
                             <use xlink:href="#youtube"></use>
                         </svg>
                     </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="popups-wrap">
-    <div class="menu-dropdown-overlay"></div>
-    <div class="all-doc-overlay"></div>
-    <div class="popups-container" id="popUpContainer">
-
-        <div class="popup popup-500" data-id="byOrderOneClick">
-            <div class="close">+</div>
-            <div class="pop-up-inner">
-                <div class="order_one_click_success">
-                    Ваше замовлення прийняте! <br>
-                    Наш менеджер зателефонує Вам найближчим часом. <br>
-                </div>
-                <button class="product-buy-btn" onclick="pageReload()">ОК</button>
-            </div>
-        </div>
-
-        <div class="popup popup-500" data-id="byOrder">
-            <div class="close">+</div>
-            <div class="pop-up-inner">
-                <div class="popup-title" id="info_product_title">Повідомити про наявність</div>
-                <div class="s-styled-form c-cont">
-                    <iframe style="display:none;" name="info_productid"></iframe>
-                    <form method="post" target="info_productid" id="report_availability" action="/ajax.php">
-                        <input type="hidden" name="action" value="info_product"/>
-                        <input type="hidden" id="info_productid" name="productid"/>
-                        <input type="hidden" id="info_product_parentid" name="parentid"/>
-                        <label class="s-label">Телефон*</label>
-                        <div class="col-input-180">
-                            <input type="text" name="email" class="phone-number" required
-                                   placeholder="+380-xx-xxx-xxxx">
-                        </div>
-                        <div class="col-submit180">
-                            <input id="info_product_submit" type="submit" value="Повідомити мене"
-                                   class="product-buy-btn">
-                        </div>
-                    </form>
-                    <div id="info_product_notes" class="form-notes">Залиште номер телефону і ми Вам зателефонуємо</div>
-                </div>
-            </div>
-        </div>
-        <div class="popup popup-545" data-id="login">
-            <div class="close">+</div>
-            <div class="pop-up-inner">
-                <div class="popup-tabs-wrap c-cont">
-                    <div class="col-50 popup-tab tabSwitcher active" data-tab="login">Вхід</div>
-                    <div class="col-50 popup-tab tabSwitcher" data-tab="register">Реєстрація</div>
-                </div>
-                <div class="popup-tabs-content">
-                    <div class="tab-content active" data-id="login">
-                        <div class="s-styled-form">
-                            <div class="title">Увійти</div>
-                            <iframe style="display:none;" name="login"></iframe>
-                            <form method="post" action="https://shop.praga-auto.com.ua/ua/inc/login.php?login"
-                                  id="authorization-form"
-                                  target="login">
-                                <div class="input-row">
-                                    <input required name="login_email" type="email" placeholder="Email">
-                                </div>
-                                <div class="input-row">
-                                    <input required type="password" name="login_passw" placeholder="Пароль">
-                                </div>
-                                <div class="input-row">
-                                    <input type="submit" value="Підтвердити" class="product-buy-btn">
-                                </div>
-                            </form>
-                            <div class="form-tip"><a class="showPopUp" data-popup="passRestore"
-                                                     href="#">Забули пароль?</a></div>
-                        </div>
-                    </div>
-                    <div class="tab-content" data-id="register">
-                        <div class="s-styled-form s-register-form">
-                            <div class="title">Реєстрація</div>
-
-                            <form method="post" action="https://shop.praga-auto.com.ua/ua/inc/new.php?rg"
-                                  id="register-form" target="login">
-                                <div class="c-cont">
-                                    <div class="col-50">
-                                        <label class="s-label f-16">Iм'я</label>
-                                        <input required name="r129" id="r129" type="text">
-                                    </div>
-                                    <div class="col-50">
-                                        <label class="s-label f-16">Прізвище</label>
-                                        <input name="r235" id="r235" type="text">
-                                    </div>
-                                </div>
-                                <div class="input-row">
-                                    <label class="s-label f-16">E-mail</label>
-                                    <input required type="email" name="email">
-                                </div>
-                                <div class="c-cont">
-                                    <div class="col-50">
-                                        <label class="s-label f-16">Пароль</label>
-                                        <input name="passw" required type="password">
-                                    </div>
-                                    <div class="col-50">
-                                        <label class="s-label f-16">Повторіть пароль</label>
-                                        <input name="repassw" required type="password">
-                                    </div>
-                                </div>
-                                <div class="input-row">
-                                    <input type="submit" value="Зареєструватися" class="product-buy-btn">
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="popup popup-545 popup-restore" data-id="passRestore">
-            <div class="close">+</div>
-            <div class="pop-up-inner">
-                <div class="c-box-450">
-                    <div class="popup-title f-30 bold">Відновлення паролю</div>
-                    <div class="s-styled-form">
-                        <form method="post" action="https://shop.praga-auto.com.ua/ua/inc/login.php?restore"
-                              target="login">
-                            <div class="input-row">
-                                <label class="s-label">Введіть email, ми відправимо Вам листа для відновлення
-                                    пароля</label>
-                                <input name="remail" type="email" required placeholder="E-mail">
-                            </div>
-                            <div class="input-row">
-                                <input type="submit" value="Надіслати" class="product-buy-btn">
-                            </div>
-                        </form>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1024,7 +742,7 @@
                     Ваше замовлення прийняте! <br>
                     Наш менеджер зателефонує Вам найближчим часом. <br>
                 </div>
-                <button class="product-buy-btn" onclick="pageReload()">ОК</button>
+                <button class="buy-btn" onclick="pageReload()">ОК</button>
             </div>
         </div>
 
@@ -1044,13 +762,14 @@
                         </div>
                         <div class="col-submit180">
                             <input id="info_product_submit" type="submit" value="Повідомити мене"
-                                   class="product-buy-btn">
+                                   class="buy-btn">
                         </div>
                     </form>
                     <div id="info_product_notes" class="form-notes">Залиште номер телефону і ми Вам зателефонуємо</div>
                 </div>
             </div>
         </div>
+
         <div class="popup popup-545" data-id="login">
             <div class="close">+</div>
             <div class="pop-up-inner">
@@ -1072,7 +791,7 @@
                                     <input required type="password" name="login_passw" placeholder="Пароль">
                                 </div>
                                 <div class="input-row">
-                                    <input type="submit" value="Підтвердити" class="product-buy-btn">
+                                    <input type="submit" value="Підтвердити" class="buy-btn">
                                 </div>
                             </form>
                             <div class="form-tip"><a class="showPopUp" data-popup="passRestore"
@@ -1109,7 +828,7 @@
                                     </div>
                                 </div>
                                 <div class="input-row">
-                                    <input type="submit" value="Зареєструватися" class="product-buy-btn">
+                                    <input type="submit" value="Зареєструватися" class="buy-btn">
                                 </div>
                             </form>
                         </div>
@@ -1129,12 +848,84 @@
                                 <input name="remail" type="email" required placeholder="E-mail">
                             </div>
                             <div class="input-row">
-                                <input type="submit" value="Надіслати" class="product-buy-btn">
+                                <input type="submit" value="Надіслати"  class="quick-btn">
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal-window" data-modal="fast">
+    <div class="backplate"></div>
+    <div class="modal-container">
+        <div class="modal-head">
+            <p>Швидка покупка</p>
+            <div class="modal-close">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="modal-cont">
+            <form id="order_in_one_click" action="">
+                <div class="one-click-form_product">
+                    <div class="s-styled-form one-click-form">
+                        <div class="input-row">
+                            <label class="s-label">Номер телефону</label>
+                            <input name="order_phone" id="order_phone" class="phone-number" type="text"
+                                   placeholder="+38(__)-___-__-__">
+                            <input name="order1click" id="order1click" type="hidden" value="">
+                        </div>
+                        <div class="input-row">
+                            <input onclick="order_by_phone(this);" type="button" data-good-id="825"
+                                   value="Чекаю дзвінка" disabled="" class="quick-btn btnorder1click">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal-window" data-modal="call-form">
+    <div class="backplate"></div>
+    <div class="modal-container">
+        <div class="modal-head">
+            <p>Звязатись із Вами</p>
+            <div class="modal-close">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="modal-cont">
+            <form id="call-form" action="">
+                <div class="one-click-form_product">
+                    <div class="s-styled-form one-click-form">
+                        <div class="input-row">
+                            <label class="s-label">Ім'я</label>
+                            <input name="call-name" id="call-name"  type="text"
+                                   placeholder="Ім'я">
+                        </div>
+                        <div class="input-row">
+                            <label class="s-label">Номер телефону</label>
+                            <input name="call-phone" id="call-phone" class="phone-number" type="text"
+                                   placeholder="+38(__)-___-__-__">
+                        </div>
+                        <div class="input-row">
+                            <label class="s-label">Почта</label>
+                            <input name="call-mail" id="call-mail"  type="text"
+                                   placeholder="Email">
+                        </div>
+                        <div class="input-row">
+                            <input  type="button" data-good-id="825"
+                                   value="Чекаю дзвінка" class="quick-btn">
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </div>
